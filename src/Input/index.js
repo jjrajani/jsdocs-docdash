@@ -126,6 +126,37 @@ class LocationSearchInput extends React.Component {
     this.setState({ suggestions: [] });
   };
 
+  inputProps = () => {
+    const defaultInputProps = {
+      type: "text",
+      autoComplete: "off",
+      role: "combobox",
+      "aria-autocomplete": "list",
+      "aria-expanded": this.getIsExpanded(),
+      "aria-activedescendant": this.getActiveSuggestionId(),
+      disabled: !this.state.ready
+    };
+
+    return {
+      ...defaultInputProps
+    };
+  };
+
+  getIsExpanded = () => {
+    return this.state.suggestions.length > 0;
+  };
+
+  getActiveSuggestionId = () => {
+    const activeSuggestion = this.getActiveSuggestion();
+    return activeSuggestion
+      ? `PlacesAutocomplete__suggestion-${activeSuggestion.placeId}`
+      : undefined;
+  };
+
+  getActiveSuggestion = () => {
+    return this.state.suggestions.find(suggestion => suggestion.active);
+  };
+
   render() {
     return (
       <div>
