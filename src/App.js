@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Button from "./Button";
 import PropTypes from "prop-types";
+import Input from "./Input";
 import "./App.css";
 
 /**
@@ -16,6 +17,7 @@ const App = ({ headerText }) => {
   return (
     <div className="App">
       <Button text={"purple"} />
+      <Input />
       <Header text={headerText} />
     </div>
   );
