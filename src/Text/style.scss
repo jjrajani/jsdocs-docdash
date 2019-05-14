@@ -1,0 +1,6 @@
+.text {
+  color: rgb(12, 12, 12);
+  &.paragraph {
+    white-space: pre-line;
+  }
+}

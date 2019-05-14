@@ -1,0 +1,55 @@
+.tab.btn {
+  border-radius: 3px 3px 0 0;
+  border-color: purple;
+  transition: all 200ms ease-in-out;
+  margin-top: 0px;
+  border-left: solid 1px darken(purple, 10%) !important;
+  &.has-text {
+    background-color: purple;
+    border-color: purple;
+  }
+  &.icon-text {
+  }
+
+  &.has-text.has-icon {
+    color: white;
+  }
+
+  &:hover {
+    &.has-text {
+      background-color: lighten(purple, 3%);
+      border-color: lighten(purple, 3%);
+    }
+    &.icon-text {
+    }
+  }
+
+  &:active,
+  &.active {
+    &.has-text {
+      background-color: lighten(purple, 7%);
+      border-color: lighten(purple, 7%);
+    }
+    &.icon-text {
+    }
+  }
+
+  &:not(.active) {
+    margin-top: 6px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 0;
+    &:first-child {
+      border-radius: 3px 0 0;
+      &:last-child {
+        border-radius: 3px 3px 0 0;
+      }
+    }
+    &:last-child {
+      border-radius: 0 3px 0 0;
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}

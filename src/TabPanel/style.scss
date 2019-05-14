@@ -1,0 +1,15 @@
+.tab-panel {
+  .tab-panel.content {
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+
+    padding: 2vh 2vw;
+    .tab-panel-body {
+      display: none;
+      &.active {
+        display: flex;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.tab-panel.header {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 -1px 0; // -1px to bring header down and cover body border line.
+  // padding: 0.5em 0 0;
+}

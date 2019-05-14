@@ -1,0 +1,104 @@
+$btn-icon-font-size: 2em;
+$text-btn-text-color: white;
+$text-btn-active-text-color: white;
+$text-btn-hover-text-color: white;
+$text-btn-font-size: 1.6em;
+$text-btn-border-color: green;
+$text-btn-background-color: green;
+$text-btn-active-border-color: darken($text-btn-background-color, 7%);
+$text-btn-hover-border-color: darken($text-btn-background-color, 3%);
+$text-btn-active-background-color: darken($text-btn-background-color, 7%);
+$text-btn-hover-background-color: darken($text-btn-background-color, 3%);
+$text-btn-padding: 12px 15px;
+
+$icon-btn-text-color: green;
+$icon-btn-active-text-color: white;
+$icon-btn-hover-text-color: darken($icon-btn-text-color, 15%);
+$icon-btn-font-size: 1.2em;
+$icon-btn-border-color: green;
+$icon-btn-background-color: white;
+$icon-btn-active-border-color: darken($icon-btn-text-color, 7%);
+$icon-btn-hover-border-color: darken($icon-btn-text-color, 3%);
+$icon-btn-active-background-color: darken($icon-btn-text-color, 7%);
+$icon-btn-hover-background-color: darken($icon-btn-text-color, 3%);
+$icon-btn-padding: 12px 15px;
+
+$text-icon-btn-hover-text-color: white;
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  &.has-text.has-icon {
+    i {
+      margin-left: 5px;
+    }
+  }
+
+  &.has-text {
+    border: solid 2px $text-btn-border-color;
+    background-color: $text-btn-background-color;
+    color: $text-btn-text-color;
+    padding: $text-btn-padding;
+    > div {
+      font-size: $text-btn-font-size;
+    }
+    &:hover {
+      color: $text-btn-hover-text-color;
+      background-color: $text-btn-hover-background-color;
+      border-color: $text-btn-hover-border-color;
+    }
+
+    &:active,
+    &.active {
+      color: $text-btn-active-text-color;
+      background-color: $text-btn-active-background-color;
+      border-color: $text-btn-active-border-color;
+    }
+  }
+
+  &.has-icon {
+    border: solid 2px $icon-btn-border-color;
+    background-color: $icon-btn-background-color;
+    color: $icon-btn-text-color;
+    padding: $icon-btn-padding;
+    > i {
+      font-size: $btn-icon-font-size;
+      max-height: 23px;
+    }
+    &:hover {
+      color: $icon-btn-hover-text-color;
+      background-color: $icon-btn-hover-background-color;
+      border-color: $icon-btn-hover-border-color;
+    }
+
+    &:active,
+    &.active {
+      color: $icon-btn-active-text-color;
+      background-color: $icon-btn-active-background-color;
+      border-color: $icon-btn-active-border-color;
+    }
+  }
+
+  &.has-text.has-icon {
+    //   border: solid 2px $text-icon-btn-border-color;
+    //   background-color: $icon-btn-background-color;
+    //   color: $icon-btn-text-color;
+    //   font-size: $icon-btn-font-size;
+    //   padding: $icon-btn-padding;
+    &:hover {
+      color: $text-icon-btn-hover-text-color;
+      //     background-color: $icon-btn-hover-background-color;
+      //     border-color: $icon-btn-hover-border-color;
+    }
+    //
+    //   &:active {
+    //     color: $icon-btn-active-text-color;
+    //     background-color: $icon-btn-active-background-color;
+    //     border-color: $icon-btn-active-border-color;
+    //   }
+  }
+}

@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./Header";
+import Button from "./Button";
+import PropTypes from "prop-types";
+import "./App.css";
 
-function App() {
+/**
+ * Application Wrapper
+ * @constructor
+ * @implements AppProps
+ * @param {AppProps} props
+ * @param {string} [props.headerText="App stuff..."]
+ * @example <App headerText="App Title" />
+ */
+const App = ({ headerText }) => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button text={"purple"} />
+      <Header text={headerText} />
     </div>
   );
-}
+};
 
+App.defaultProps = {
+  headerText: "App stuff..."
+};
+
+/**
+ * App Component Props
+ * @interface AppProps
+ * @property {string} [headerText="App stuff..."] Text content.
+ *
+ * @example { headerText: 'App stuff...' }
+ */
+App.propTypes = {
+  headerText: PropTypes.string
+};
 export default App;

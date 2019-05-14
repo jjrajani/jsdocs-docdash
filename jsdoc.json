@@ -1,0 +1,43 @@
+{
+  "opts": {
+    "template": "node_modules/docdash",
+    "encoding": "utf8",
+    "destination": "docs/",
+    "recurse": true,
+    "verbose": true
+  },
+  "plugins": ["plugins/markdown"],
+  "source": {
+    "include": "./src"
+  },
+  "templates": {
+    "default": {
+      "staticFiles": {
+        "include": ["public/doc_assets/"],
+        "paths": ["assets/"]
+      },
+      "outputSourceFiles": true
+    },
+    "cleverLinks": true,
+    "monospaceLinks": false
+  },
+  "docdash": {
+    "typedefs": true,
+    "static": true, // Display the static members inside the navbar
+    "sort": true, // Sort the methods in the navbar
+    "search": true,
+    "collapse": true,
+    "typedefs": true,
+    "sectionOrder": [
+      // Order the main section in the navbar (default order shown here)
+      "Classes"
+      /* "Interfaces",
+      "Modules",
+      "Externals",
+      "Events",
+      "Namespaces",
+      "Mixins",
+      "Tutorials" */
+    ]
+  }
+}
