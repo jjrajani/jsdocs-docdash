@@ -133,7 +133,11 @@ class LocationSearchInput extends React.Component {
         <div>
           {this.state.suggestions.map(s => {
             console.log("s", s);
-            return <div onClick={this.handleSelect.bind(this, s)}>sug</div>;
+            return (
+              <div onClick={this.handleSelect.bind(this, s)}>
+                {s.description}
+              </div>
+            );
           })}
         </div>
       </div>
