@@ -1,0 +1,7 @@
+.option {
+  background-color: inherit;
+  transition: background-color 160ms ease-in-out;
+  &.active {
+    background-color: lightgrey;
+  }
+}
